@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Buddy</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Signin.css' %}">
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+</head>
+<body>
+    <div class="flip">
+        <form class="login" action="" method="post">
+            {% csrf_token %}
+            <h1>Sign up</h1>
+            <input class="input" autocomplete="off" required name="fname" id="fname"  type="text" placeholder="First name" />
+            <input class="input" autocomplete="off" required name="lname" id="lname"  type="text" placeholder="Last Name" />
+            <input class="input" autocomplete="off" required name="name" id="name"  type="text" placeholder="Username" />
+            <input class="input" autocomplete="off" required name="email" id="email" type="email" placeholder="Email"/>
+            <button class="submit logbtn" id="otp_btn" type="submit">Submit</button>
+            <a href="{%url 'login'%}">Already have an account?</a>
+        </form>
+    </div>
+    <div class="ocean">
+        <div class="bottom"></div>
+        <img class="wave" src="./static/img/wave (1).svg" alt="">
+        <img class="wave" src="./static/img/wave (2).svg" alt="">
+        <img class="wave" src="./static/img/wave (3).svg" alt="">
+        <img class="wave" src="./static/img/wave (1).svg" alt="">
+        <img class="wave" src="./static/img/wave (4).svg" alt="">
+        <img class="wave" src="./static/img/wave (5).svg" alt="">
+    </div>
+    
+</body>
+</html>
+
+

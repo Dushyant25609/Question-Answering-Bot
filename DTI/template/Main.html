@@ -1,0 +1,84 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Buddy</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+    <link rel="shortcut icon" href="{% static '/img/SB.png' %}" type="image/x-icon">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var form = document.querySelector('.input'); // Adjust selector as needed
+
+            if (form) {
+                form.addEventListener('keypress', function(event) {
+                    if (event.key === 'Enter') {
+                        form.submit();
+                    }
+                });
+            }
+        });
+        var flag = true;
+        function ToggleNav() {
+          if(flag == false){
+            document.getElementById("mySidenav").style.width = "15vw";
+            flag = true;
+          }
+          else if(flag == true){
+            document.getElementById("mySidenav").style.width = "0";
+            flag = false;
+          }
+        }     
+    </script>
+</head>
+<body>
+    <div id="loader" class="loader">
+        <img src="/DTI/static/img/logo.png" alt="hi">
+      </div>
+      <script defer>
+        document.addEventListener("DOMContentLoaded", function() {
+            var img = document.getElementById("loader");
+            img.style.display = "none";
+        });
+    </script>
+        <div>
+            <div id="mySidenav" class="sidenav">
+                <p>Chats</p>
+                <p>User</p>
+            </div>
+            <span onclick="ToggleNav()">STUDY BRAINIAC</i></span>
+            <div id="main">
+            </div>
+        </div>
+
+        <div class="center">
+
+            <div class="rply">
+                {% if question %}
+                <p class="message">Question: <br>{{ question }}</p>
+                {% endif %}
+                {% if message %}
+                    <p class="message">{{ message }}</p>
+                {% endif%}
+                {% if not message %}
+            </div>
+            <div class="start">
+                <h2>Welcome to</h2>
+                <h1>Study Buddy</h1>
+                <h2>your AI buddy for studies.</h2>
+            </div>
+            {% endif %}
+            <div class="start_tag">
+                {% if not message %}
+                <h3>How can i help you?</h3>
+                {% endif %}
+            <form action="" method="post">
+                {% csrf_token %}
+                <input type="text" autocomplete="off" class="input" name="input" placeholder="Write your question here...">
+            </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

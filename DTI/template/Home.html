@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Buddy</title>
+    <link rel="stylesheet" href="{% static 'home2.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="{% static '/img/SB.png' %}" type="image/x-icon">
+  </head>
+
+  <body>
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+        
+    </script>
+        
+        
+    <div id="loader" class="loader">
+      <img src="/DTI/static/img/logo.png" alt="hi">
+    </div>
+    
+    <div class="main">
+        <div class="nav">
+            <p class="logo">Study Brainiac</p>
+            <div class="right">
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="{% url 'signin' %}">Sign in</a>
+                    <a href="{% url 'login' %}">Log in</a>
+                  </div>
+                  <span onclick="openNav()"><i class="fa fa-bars" style="font-size:3vw;color:snow"></i></span>
+                  <div id="main">
+                  </div>
+                <a href="{% url 'signin' %}">Sign up</a>
+                <a href="{% url 'login' %}">Log in</a>
+            </div>
+        </div>
+        <div class="center">
+            <div class="Name">Study Buddy</div>
+            <div class="tag">
+                <p>Learn</p>
+                <p>The</p>
+                <p>Future</p>
+                <p>Way</p>
+            </div>
+        </div>
+        <div class="ocean">
+            <div class="bottom"></div>
+            <img class="wave" src="./static/img/wave (1).svg" alt="">
+            <img class="wave" src="./static/img/wave (2).svg" alt="">
+            <img class="wave" src="./static/img/wave (3).svg" alt="">
+            <img class="wave" src="./static/img/wave (1).svg" alt="">
+            <img class="wave" src="./static/img/wave (4).svg" alt="">
+            <img class="wave" src="./static/img/wave (5).svg" alt="">
+        </div>
+    </div>
+    <script defer>
+      document.addEventListener("DOMContentLoaded", function() {
+          var img = document.getElementById("loader");
+          img.style.display = "none";
+      });
+  </script>
+  </body>
+</html>

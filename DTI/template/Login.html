@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Buddy</title>
+    {% load static %}
+    <link rel="stylesheet"  href="{% static 'Login.css' %}">
+    <link rel="shortcut icon" href="{% static '/img/SB.png' %}" type="image/x-icon">
+</head>
+<body>
+    {% if messages %}
+    <div class="container">
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                {{ message }}
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+    <div class="flip">
+        <form class="login" action="" method="post">
+            {% csrf_token %}
+            <h1>Log In</h1>
+            <input class="input" required name="name" autocomplete="off"  type="text" placeholder="Username" />
+            <input class="input" required type="password" autocomplete="off" name="password"  placeholder="Password" />
+            <button class="input" type="submit"  style="background-color: #256DF7; color: snow;" class="logbtn">Log in</button>             
+            <a href="{% url 'signin' %}">Create a new account.</a>
+        </form>
+    </div>
+    <div class="ocean">
+        <div class="bottom"></div>
+        <img class="wave" src="./static/img/wave (1).svg" alt="">
+        <img class="wave" src="./static/img/wave (2).svg" alt="">
+        <img class="wave" src="./static/img/wave (3).svg" alt="">
+        <img class="wave" src="./static/img/wave (1).svg" alt="">
+        <img class="wave" src="./static/img/wave (4).svg" alt="">
+        <img class="wave" src="./static/img/wave (5).svg" alt="">
+    </div>
+</body>
+</html>

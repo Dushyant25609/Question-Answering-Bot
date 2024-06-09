@@ -1,0 +1,282 @@
+@font-face {
+    font-family: "AnoStencil W00 Regular";
+    src: url("https://db.onlinewebfonts.com/t/b8efc807de4361147855dd87d07cb12f.eot");
+    src: url("https://db.onlinewebfonts.com/t/b8efc807de4361147855dd87d07cb12f.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/b8efc807de4361147855dd87d07cb12f.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/b8efc807de4361147855dd87d07cb12f.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/b8efc807de4361147855dd87d07cb12f.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/b8efc807de4361147855dd87d07cb12f.svg#AnoStencil W00 Regular")format("svg");
+  }
+  
+  html, body {
+    height: 100%;
+    margin: 0; 
+  }
+  
+  body {
+    background-color: #000000;
+    overflow: hidden;
+  }
+  
+  .ocean {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+  }
+  
+  .bottom{
+    position: absolute;
+    width: 100vw;
+    height: 4vh;
+    bottom: 0;
+    z-index: 7;
+    background-color: #000000;
+  }
+  
+  .wave {
+    position: absolute;
+    bottom: 0;
+  }
+  
+  .wave:nth-of-type(1) {
+    animation: wave 6s linear infinite;
+    opacity: 0.7;
+    z-index: 1;
+  }
+  
+  .wave:nth-of-type(2) {
+    animation: wave 12s linear infinite;
+    opacity: 0.8;
+    z-index: 2;
+  }
+  
+  .wave:nth-of-type(3) {
+    animation: wave 8s linear infinite;
+    opacity: 0.6;
+    z-index: 3;
+  }
+  
+  .wave:nth-of-type(4) {
+    animation: wave 10s linear infinite;
+    opacity: 0.8;
+    z-index: 4;
+  }
+  
+  .wave:nth-of-type(5) {
+    animation: wave 7s linear infinite;
+    opacity: 0.6;
+    z-index: 5;
+  }
+  
+  .wave:nth-of-type(6) {
+    animation: wave 13s linear infinite;
+    opacity: 0.7;
+    z-index: 6;
+  }
+  
+  @keyframes wave {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    color: snow;
+    padding: 5px;
+  }
+  
+  .nav a {
+    position: relative;
+  }
+  
+  .nav a::before {
+    content: "";
+    position: absolute;
+    bottom: -2px; 
+    left: 0;
+    width: 0;
+    height: 2.5px;
+    background-color: #06FFFF;
+    transition: width 0.3s ease;
+  }
+  
+  .nav a:hover::before {
+    width: 100%;
+  }
+  
+  
+  .nav a:hover::before {
+    width: 100%;
+  }
+  
+  .right{
+    display: flex;
+    width: 20vw;
+    font-size: 1.5vw;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .logo{
+    font-size: 1.5vw;
+    font-weight: bolder;
+  }
+  
+  .center{
+    display: flex;
+    margin-top: 7vw;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .center > * {
+    margin: 0px;
+  }
+  
+  .Name{
+    font-family: "AnoStencil W00 Regular";
+    color: transparent;
+    background-image: linear-gradient(#06D2FF 30%,#0057FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: bolder;
+    font-size: 12vw;
+  }
+  
+  
+  
+  .tag{
+    color: snow;
+    font-size: 2.5vw;
+    display: flex;
+    width: 50vw;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: lighter;
+    -webkit-animation: glow 2s ease-in-out infinite alternate;
+    -moz-animation: glow 2s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #00bfff, 0 0 4px #00bfff, 0 0 5px #00bfff, 0 0 6px #00bfff, 0 0 7px #00bfff;
+    }
+    to {
+      text-shadow: 0 0 2px #fff, 0 0 3px #1e90ff, 0 0 4px #1e90ff, 0 0 50px #1e90ff, 0 0 10px #1e90ff, 0 0 17px #1e90ff, 0 0 8px #1e90ff;
+    }
+  }
+  
+  a{
+    color: snow;
+    text-decoration: none;
+  }
+  
+  .sidenav,span {
+    display: none;
+  }
+  
+  @media(max-width: 767px) {
+    a{
+      display: none;
+    }
+    /* The side navigation menu */
+  
+    span{
+      display: block;
+    }
+  .sidenav {
+    display: block;
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 12; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 75vw;
+    background-color: #111111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 2.5vw;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    left: -4vw;
+    font-size: 5vw;
+  }
+  
+  
+  .sidenav a:hover{
+    color: #f1f1f1;
+  }
+  
+  #main {
+    transition: margin-right .5s;
+    padding: 20px;
+  }
+  
+  .Name{
+    font-size: 25vw;
+    margin: 10vw;
+  }
+  
+  .tag{
+    font-size: 7vw;
+  }
+  
+  }
+  
+  
+  
+  .loader img {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    animation: rotate 2s linear infinite;
+  }
+  
+  .loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50vh;
+    left: 50vw;
+    background-color: #000000;
+    height: 100vh;
+    width: 100vw;
+    z-index: 15;
+  }
+  
+  @keyframes rotate {
+    0%{
+      transform: rotate(0deg);
+      filter: drop-shadow(0px 0px 10px #41a3fe );
+    }
+    50%{
+      transform: rotate(180deg);
+      filter: drop-shadow(0px 0px 100px #41a3fe);
+    }
+    100%{
+      transform: rotate(360deg);
+      filter: drop-shadow(0px 0px 10px #41a3fe);
+    }
+  }
+  
+  

@@ -1,0 +1,201 @@
+@font-face {
+    font-family: "AnoStencil W00 Regular";
+    src: url("https://db.onlinewebfonts.com/t/b8efc807de4361147855dd87d07cb12f.eot");
+    src: url("https://db.onlinewebfonts.com/t/b8efc807de4361147855dd87d07cb12f.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/b8efc807de4361147855dd87d07cb12f.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/b8efc807de4361147855dd87d07cb12f.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/b8efc807de4361147855dd87d07cb12f.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/b8efc807de4361147855dd87d07cb12f.svg#AnoStencil W00 Regular")format("svg");
+  }
+
+html, body {
+    height: 100%;
+    margin: 0; 
+    box-sizing: border-box;
+  }
+  
+body {
+    background-color: #000000;
+    overflow: hidden;
+}
+/* The side navigation menu */
+.sidenav {
+    height: 100vh; /* 100% Full-height */
+    width: 15vw; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #202020; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 3vh; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 2px solid #06d1ff2f;
+  }
+  
+  /* The navigation menu links */
+  .sidenav p {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 2vw;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav p:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and p smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav p {font-size: 18px;}
+  }
+  
+  span{
+    position: absolute;
+    color: snow;
+    z-index: 2;
+    padding: 1vw;
+    font-size: 1.5vw;
+    font-weight: bolder;
+    
+  }
+.center{
+    color: snow;
+    position: absolute;
+    left: 25vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.start > * {
+    margin: 1vw;
+}
+
+h2{
+    font-size: 5vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+}
+
+h1{
+    font-size: 10vw;
+    font-family: "AnoStencil W00 Regular";
+    color: transparent;
+    background-image: linear-gradient(#06D2FF 30%,#0057FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: bolder;
+    font-size: 12vw;
+}
+
+.start_tag{
+    position: fixed;
+    top: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50vw;
+    box-sizing: border-box;
+}
+
+h3{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    font-size: 2vw;
+}
+
+.input{
+    height: 3vw;
+    text-wrap: wrap;
+    width: 60vw;
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    margin-top: 40px;
+    flex-direction: column;
+    border: 0.5px solid #06D2FF;
+    background-color: #202020;
+    color: rgb(251, 251, 251);
+    font-size: 1.5vw;
+    padding: 1vw;
+    border-radius: 1.5rem;
+    margin-left: 60px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.message{
+    margin: 100px;
+    font-size: 2.5vh;
+}
+
+p{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+.loader img {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  animation: rotate 2s linear infinite;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50vh;
+  left: 50vw;
+  background-color: #000000;
+  height: 100vh;
+  width: 100vw;
+  z-index: 15;
+}
+
+@keyframes rotate {
+  0%{
+    transform: rotate(0deg);
+    filter: drop-shadow(0px 0px 10px #41a3fe );
+  }
+  50%{
+    transform: rotate(180deg);
+    filter: drop-shadow(0px 0px 100px #41a3fe);
+  }
+  100%{
+    transform: rotate(360deg);
+    filter: drop-shadow(0px 0px 10px #41a3fe);
+  }
+}
+
